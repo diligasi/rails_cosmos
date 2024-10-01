@@ -1,6 +1,14 @@
 AllCops:
   TargetRubyVersion: 3.0
 
+  SuggestExtensions: false
+
+  Exclude:
+    - 'spec/**/*.rb'
+    - 'rails_cosmos.gemspec'
+    - 'vendor/**/*'
+    - 'bin/*'
+
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 
