@@ -1,0 +1,12 @@
+require "rails_helper"
+
+<% if namespace -%>
+RSpec.describe <%= namespace.camelcase %>::<%= file_name.camelcase %>, type: :operation do
+<% else -%>
+RSpec.describe <%= file_name.camelcase %>, type: :operation do
+<% end -%>
+  it "executes call successfully" do
+    result = described_class.call
+    expect(result.first).to be_truthy
+  end
+end

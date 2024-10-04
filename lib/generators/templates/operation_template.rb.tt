@@ -1,0 +1,33 @@
+# frozen_string_literal: true
+
+<% if namespace -%>
+module <%= namespace.camelcase %>
+  class <%= file_name.camelcase %> < ApplicationOperation
+    def initialize(log_uuid: nil)
+      super(log_uuid:)
+    end
+
+    def call
+      # Add your business logic here, if necessary
+      # adding additional methods, we encourage the
+      # use of private functions below
+
+      success(self)
+    end
+  end
+end
+<% else -%>
+class <%= file_name.camelcase %> < ApplicationOperation
+  def initialize(log_uuid: nil)
+    super(log_uuid:)
+  end
+
+  def call
+    # Add your business logic here, if necessary
+    # adding additional methods, we encourage the
+    # use of private functions below
+
+    success(self)
+  end
+end
+<% end -%>
