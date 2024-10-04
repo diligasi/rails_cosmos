@@ -247,7 +247,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  generator_spec
+  generator_spec (~> 0.10.0)
   rails_cosmos!
   rake (~> 13.0)
   rspec (~> 3.0)
