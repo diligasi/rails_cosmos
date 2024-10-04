@@ -11,7 +11,6 @@ RSpec.describe RailsCosmos::Generators::InstallGenerator, type: :generator do
   end
 
   it "creates the operation directory and file" do
-    expect(1).to eq 1
     expect(File).to exist("#{destination_root}/app/operations/application_operation.rb")
   end
 end

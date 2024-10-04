@@ -1,0 +1,14 @@
+require "test_helper"
+
+<% if namespace -%>
+class <%= namespace.camelcase %>::<%= file_name.camelcase %>Test < ActiveSupport::TestCase
+  test "executes call successfully" do
+    result = <%= namespace.camelcase %>::<%= file_name.camelcase %>.call
+<% else -%>
+class <%= file_name.camelcase %>Test < ActiveSupport::TestCase
+  test "executes call successfully" do
+    result = <%= file_name.camelcase %>.call
+<% end -%>
+    assert result.first
+  end
+end
