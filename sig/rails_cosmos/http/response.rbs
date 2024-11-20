@@ -1,0 +1,12 @@
+module RailsCosmos
+  module Http
+    class Response
+      attr_reader body: Hash[untyped, untyped]
+      attr_reader status: Integer
+      attr_reader raw_body: untyped
+
+      def initialize: (response: untyped) -> void
+      def success?: () -> bool
+    end
+  end
+end

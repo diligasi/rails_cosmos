@@ -14,3 +14,15 @@ Style/StringLiterals:
 
 Style/StringLiteralsInInterpolation:
   EnforcedStyle: double_quotes
+
+Metrics/MethodLength:
+  Max: 15
+
+Metrics/AbcSize:
+  Max: 20
+
+Layout/LineLength:
+  Max: 170
+
+Metrics/ParameterLists:
+  Max: 8
