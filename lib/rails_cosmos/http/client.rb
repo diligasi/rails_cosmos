@@ -5,6 +5,32 @@ require "faraday_middleware"
 
 module RailsCosmos
   module Http
+    # RailsCosmos::Http::Client
+    #
+    # A wrapper around Faraday for making HTTP requests with enhanced logging and
+    # error handling. This class provides a simple interface for sending requests
+    # to external APIs and logging request/response details for observability.
+    #
+    # @example Creating a client instance
+    #   client = RailsCosmos::Http::Client.new(
+    #     url: "https://api.example.com",
+    #     service: "ExampleService",
+    #     adapter: :typhoeus
+    #   )
+    #
+    # @example Making a GET request
+    #   response = client.get("/endpoint", headers: { "Authorization" => "Bearer token" })
+    #
+    # @example Making a POST request with a payload
+    #   response = client.post(
+    #     "/endpoint",
+    #     payload: { key: "value" },
+    #     headers: { "Content-Type" => "application/json" }
+    #   )
+    #
+    # @attr_reader [String] url The base URL for the HTTP client.
+    # @attr_reader [String] service The name of the service for logging purposes.
+    # @attr_reader [Symbol] adapter The Faraday adapter to use for making requests.
     class Client
       def initialize(url:, service:, adapter: :typhoeus)
         @url = url
