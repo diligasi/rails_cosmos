@@ -1,5 +1,13 @@
 ## [Unreleased]
 
+## [1.0.1] - 2025-04-23
+
+### Changed
+- Updated gem dependencies to avoid open-ended version warnings:
+    - Changed `faraday` from `>= 2.0` to `~> 2.3`
+    - Changed `faraday-typhoeus` from `>= 0` to `~> 1.1`
+    - Changed `faraday-follow_redirects` from `>= 0` to `~> 0.3.0`
+
 ## [1.0.0] - 2025-04-23
 
 ### Changed
