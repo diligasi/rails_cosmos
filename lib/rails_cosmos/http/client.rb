@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 require "faraday"
-require "faraday_middleware"
+require "faraday/typhoeus"
+require "faraday/follow_redirects"
 
 module RailsCosmos
   module Http
@@ -71,7 +72,7 @@ module RailsCosmos
         Faraday.new(url: @url) do |conn|
           conn.request :json
           conn.response :json, content_type: /\bjson$/
-          conn.use FaradayMiddleware::FollowRedirects, limit: 5
+          conn.use Faraday::FollowRedirects::Middleware, limit: 5
           conn.adapter @adapter
         end
       end
