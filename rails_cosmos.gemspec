@@ -46,9 +46,10 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "faraday", "~> 1.10.4"
-  spec.add_dependency "faraday_middleware", "~> 1.2", ">= 1.2.1"
-  spec.add_dependency "typhoeus", "~> 1.4", ">= 1.4.1"
+  spec.add_dependency "rails", "~> 7.0"
+  spec.add_dependency "faraday", ">= 2.0"
+  spec.add_dependency "faraday-typhoeus"
+  spec.add_dependency "faraday-follow_redirects"
 
   spec.add_development_dependency "generator_spec", "~> 0.10.0"
 end
