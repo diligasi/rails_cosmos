@@ -1,10 +1,10 @@
 PATH
   remote: .
   specs:
-    rails_cosmos (1.0.0)
-      faraday (>= 2.0)
-      faraday-follow_redirects
-      faraday-typhoeus
+    rails_cosmos (1.0.1)
+      faraday (~> 2.3)
+      faraday-follow_redirects (~> 0.3.0)
+      faraday-typhoeus (~> 1.1)
       rails (~> 7.0)
 
 GEM
