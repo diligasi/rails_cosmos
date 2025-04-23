@@ -1,5 +1,13 @@
 ## [Unreleased]
 
+## [1.0.2] - 2025-04-23
+
+### Fixed
+- Fixed an accidental dependency on `rails (~> 7.0)` that unnecessarily restricted usage to Rails 7 applications.
+
+### Changed
+- Removed the `rails` dependency to allow broader compatibility with non-Rails or older Rails environments.
+
 ## [1.0.1] - 2025-04-23
 
 ### Changed
